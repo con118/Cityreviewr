@@ -24,6 +24,6 @@ footer {
 .container-row {
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 50px;
   }
