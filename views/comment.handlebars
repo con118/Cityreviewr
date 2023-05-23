@@ -49,18 +49,29 @@
         </div>
         <!-- /.row -->
 
-  <div class="row">
-            {{#each cities}}
-            <div class="col-md-4 portfolio-item">
-                <a href="{{url}}">
-                    <img class="img-responsive" src="{{image}}" alt="{{city_name}}">
-                </a>
-                <h3>
-                    <a href="{{url}}">{{city_name}}, {{state}}</a>
-                </h3>
-                <p>{{description}}</p>
+        <!-- Comment Form -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Add a Comment</h2>
+                <form action="/submit-comment" method="POST">
+                    <div class="form-group">
+                        <label for="city">Select City:</label>
+                        <select class="form-control" id="city" name="city" required>
+                            {{#each cities}}
+                            <option value="{{name}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-default" onclick="location.href='{{url}}'">Cancel</button>
+                    </div>
+                </form>
             </div>
-            {{/each}}
         </div>
     </div>
 
