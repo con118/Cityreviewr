@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { City, Review, User } = require("../models");
+const { City, Review, User, Todo } = require("../models");
 
 // Get all Cities for homepage
 router.get("/", async (req, res) => {
@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
   try {
     console.log("cityone");
     const singleCityData = await City.findByPk(req.params.id, {
-      include: { model: Review },
+      include: { model: Review, model: Todo },
       attributes: {
         exclude: ["description", "image"],
       },
