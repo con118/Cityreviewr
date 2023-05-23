@@ -49,24 +49,23 @@
         </div>
         <!-- /.row -->
 
- <!-- Projects Row -->
-<div class="row">
-    {{#each cities}}
-    <div class="col-md-4 portfolio-item">
-        <a href="{{url}}">
-            <img class="img-responsive" src="{{image}}" alt="{{name}}">
-        </a>
-        <h3>
-            <a href="{{url}}">{{name}}</a>
-        </h3>
-        <p>{{description}}</p>
+        <div class="row">
+            {{#each cities}}
+            <div class="col-md-4 portfolio-item">
+                <a href="{{url}}">
+                    <img class="img-responsive" src="{{image}}" alt="{{name}}">
+                </a>
+                <h3>
+                    <a href="{{url}}">{{name}}</a>
+                </h3>
+                <p>{{description}}</p>
+            </div>
+            {{/each}}
+        </div>
     </div>
-    {{/each}}
-</div>
 
-
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
