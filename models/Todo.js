@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class City extends Model {}
+class Todo extends Model {}
 
-City.init(
+Todo.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,29 +11,34 @@ City.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    city_name: {
+    things_todo1: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    state: {
+
+    things_todo2: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    image: {
+    things_todo3: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    city_image: {
+    things_todo4: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    city_description: {
-      type: DataTypes.TEXT,
+    things_todo5: {
+      type: DataTypes.STRING,
       allowNull: false,
+    },
+
+    city_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "city",
+        key: "id",
+      },
     },
   },
   {
@@ -41,8 +46,8 @@ City.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "city",
+    modelName: "todo",
   }
 );
 
-module.exports = City;
+module.exports = Todo;
