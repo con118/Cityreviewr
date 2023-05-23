@@ -1,0 +1,56 @@
+[
+  {
+    "city_name": "Sydney",
+    "state": "NSW",
+    "image": "Sydney.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "SydSlim.png",
+    "city_description": "Sydney is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Sydney Opera House"
+  },
+  {
+    "city_name": "Melbourne",
+    "state": "VIC",
+    "image": "Melbourne.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "MelSlim.png",
+    "city_description": "Melbourne is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Melbourne"
+  },
+  {
+    "city_name": "Hobart",
+    "state": "Tasmania",
+    "image": "Hobart.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "HobSlim.png",
+    "city_description": "Hobart is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Hobart House"
+  },
+  {
+    "city_name": "Darwin",
+    "state": "NT",
+    "image": "Darwin.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "DarSlim.png",
+    "city_description": "Sydney is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Sydney Opera House"
+  },
+  {
+    "city_name": "Canberra",
+    "state": "ACT",
+    "image": "Canberra.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "CanSlim.png",
+    "city_description": "Melbourne is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Melbourne"
+  },
+  {
+    "city_name": "Adelaide",
+    "state": "SA",
+    "image": "Adelaide.png",
+    "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
+    "city_image": "AdSlim.png",
+    "city_description": "Hobart is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo": "Visit the Hobart House"
+  }
+]
