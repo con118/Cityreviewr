@@ -10,12 +10,12 @@
     "city_id": 1
   },
   {
-    "reviews": "Sydney is an amazing city with so much to offer. The people are friendly, the food is great, and the beaches are beautiful",
+    "reviews": "Melbourne is an amazing city with so much to offer. The people are friendly, the food is great, and the beaches are beautiful",
     "user_id": 2,
     "city_id": 2
   },
   {
-    "reviews": "I loved my visit to Sydney. The city has a great mix of urban and natural environments, which makes it really unique. I especially enjoyed exploring the various neighborhoods and trying the di",
+    "reviews": "I loved my visit to Hobart. The city has a great mix of urban and natural environments, which makes it really unique. I especially enjoyed exploring the various neighborhoods and trying the di",
     "user_id": 2,
     "city_id": 3
   }

@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Review extends Model {}
 
+//For review table
 Review.init(
   {
     id: {
