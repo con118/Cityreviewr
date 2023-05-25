@@ -12,17 +12,17 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 //ToDo session ***********
-// const sess = {
-//   secret: 'Super Travel Aus',
-//   cookie: {},
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize,
-//   }),
-// };
+const sess = {
+  secret: "Super Travel Aus",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-// app.use(session(sess));
+app.use(session(sess));
 
 const hbs = exphbs.create({});
 //app.engine("handlebars", exphbs());
