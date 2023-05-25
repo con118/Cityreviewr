@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS travel_db;
+  drop database if exists reviews5_db;
+  create database reviews5_db;
 
-CREATE DATABASE travel_db;

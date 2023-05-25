@@ -1,0 +1,95 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Review</title>
+    <link rel="stylesheet" href="styles/jass.css" />
+  </head>
+  <body>
+    <div class="jumbotron"><h1>Submit A Review</h1></div>
+    
+    <div class="container">
+      
+        <form class="p-5 col-8" id="search-input">
+        <input type ="text"  class="form-input" id="search-place" placeholder = "search for a destination">
+        </form>
+     
+       
+        <small id="usernameHelp" class="form-text text-muted">
+          method GET is required for this assigment</small>
+      <form class="p-5 col-8" id="review-form">
+        
+        <div class="form-group">
+          <label for="review">Review</label>
+          <input
+            class="form-input"
+            id="review"
+            placeholder="review"
+          />
+        </div>
+        <div class="form-group">
+          <label for="rate">Rate</label>
+          <input
+            class="form-input"
+            id="rate"
+            placeholder="rate your experience"
+          />
+        </div>
+    
+     <!--       <div class="form-group">
+          <label for="place">Place Visited</label>
+          <input
+            type="review"
+            class="form-input"
+            id="place_name"
+            placeholder="place you have visited"
+          />
+        </div>-->
+     
+
+        <div class="form-group">
+          <label for="placeid">Place Number</label>
+          <input
+            type="review"
+            class="form-input"
+            id="place_id"
+            placeholder="place number"
+          />
+        </div>
+
+
+
+   
+        <small id="usernameHelp" class="form-text text-muted"
+        >method POST is required for this assigment</small
+      > 
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <br>
+    <div class="jumbotron" id ="show">
+      <div class = "jumbotron2">
+        <button type="submit" class="btn btn-primary" id="show-review">
+          Reviews
+        </button>
+        <div></div>
+        <a class="btn btn-primary" href="./visuals.html" role="button">Rates</a>
+ 
+      </div>
+    </div>
+    <script>
+
+      </script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+    ></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

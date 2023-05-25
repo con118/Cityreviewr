@@ -1,36 +1,25 @@
-// import models
-const User = require("./User");
-const City = require("./City");
-const Review = require("./Review");
-const Todo = require("./Todo");
+const Place = require('./place');
+const Review = require('./review');
+const Traveller = require('./traveller');
 
-//One user has Many Reviews
-//one review belongs to one user
-//one city has many reviews
-//one city has one todo
-
-City.hasOne(Todo,{
-  foreignKey: "city_id",
+Place.hasMany(Review, {
+  foreignKey: 'place_id',
+  onDelete: 'CASCADE',
 });
 
-Review.belongsTo(City, {
-  foreignKey: "city_id",
+Traveller.hasMany(Review, {
+  foreignKey: 'traveller_id',
+  onDelete: 'CASCADE',
 });
 
-City.hasMany(Review, {
-  foreignKey: "city_id",
-});
-Review.belongsTo(User, {
-  foreignKey: "user_id",
+
+
+Review.belongsTo(Place, {
+  foreignKey: 'place_id',
 });
 
-User.hasMany(Review, {
-  foreignKey: "user_id",
+Review.belongsTo(Traveller, {
+  foreignKey: 'traveller_id',
 });
 
-module.exports = {
-  User,
-  City,
-  Review,
-  Todo,
-};
+module.exports = { Place, Review, Traveller };

@@ -1,42 +1,45 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Review extends Model {}
 
-//For review table
 Review.init(
-  {
+
+{
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
     },
-    reviews: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    review_text: {
+        type: DataTypes.STRING
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
+    rate: {
+        type: DataTypes.INTEGER
     },
-    city_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "city",
-        key: "id",
-      },
+   
+   traveller_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'traveller',
+            key: 'id',
+        }
     },
-  },
-  {
-    sequelize,
+    
+    place_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'place',
+            key: 'id',
+        }
+    }
+
+},
+{   sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "review",
+    modelName: 'review'
   }
 );
 
