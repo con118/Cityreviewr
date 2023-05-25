@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { City, Review, User, Todo } = require("../models");
 
+// need to require users db?
+
 // Get all Cities for homepage
 router.get("/", async (req, res) => {
   try {
@@ -40,12 +42,18 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//For Login page
 
-// router.get("/login", async (req, res) => {
-//     //verification
 
-//     res.render("login");
-//   });
+router.get('/login', (req, res) => {
+  // Render the 'login' template
+  res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // Render the 'signup' template
+  res.render('signup');
+});
+
+
 
 module.exports = router;
