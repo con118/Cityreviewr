@@ -3,8 +3,6 @@ const { City, Review, Todo } = require("../models");
 
 //const withAuth = require('../utils/auth');
 
-// need to require users db?
-
 // Get all Cities for homepage
 router.get("/", async (req, res) => {
   try {
@@ -84,15 +82,6 @@ router.get("/:name", async (req, res) => {
 });
 
 
-router.get('/login', (req, res) => {
-  // Render the 'login' template
-  res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-  // Render the 'signup' template
-  res.render('signup');
-});
 
 
 
@@ -128,4 +117,15 @@ router.get("/login", (req, res) => {
 
   res.render("login");
 });
+
+
+// for signup page 
+
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+
+
 module.exports = router;
