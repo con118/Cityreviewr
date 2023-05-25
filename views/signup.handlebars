@@ -1,18 +1,66 @@
-<form class="form-signin">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-    <label for="inputName" class="sr-only">Name</label>
-    <input type="text" id="inputName" class="form-control" placeholder="Full Name" required="" autofocus="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+</head>
 
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <span class="glyphicon glyphicon-fire"></span>
+                    Travel Australia
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Cities</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#/login">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+    <div class="container">
+        <section class="text-center">
+            <form class="form-signin">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
+                <label for="inputName" class="sr-only">Name</label>
+                <input type="text" id="inputName" class="form-control" placeholder="Full Name" required="" autofocus="">
 
-    <label for="confirmPassword" class="sr-only">Confirm Password</label>
-    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="">
 
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-</form>
+                <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password"
+                    required="">
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
