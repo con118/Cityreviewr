@@ -75,23 +75,18 @@ reviewForm.addEventListener('submit', (e) => {
 
   const newReview = {
     review_text: reviewInput.value.trim(),
-    rate: rateInput.value.trim(),
+    rate: parseInt(rateInput.value.trim()),
     //traveller_id: userNumberInput.value.trim(),
     traveller_id: 1,
-    place_id: placeNumberInput.value.trim()
-
-	 
-    // place: placeInput.value.trim(),
+    //place_id: 5,
+    place_name: placeInput.value.trim(),
   };
 
-  
+  console.log(newReview);
 
   postReview(newReview)
-    .then((data) => alert(`Review added! Review ID: ${data.body.id}`))
-    .catch((err) => console.error(err));
-
-  
-    localStorage.setItem(timeStamp, JSON.stringify(newReview));
+   
+    //localStorage.setItem(timeStamp, JSON.stringify(newReview));
 });
 
 //render existing reviews
@@ -126,7 +121,7 @@ const renderReviews = (id) => {
 
 
 const getAndRender = () =>
-  //getReviews().then((response) => response.forEach((review_id) => renderReviews(review_id)));
+  
   getReviews().then((response) => response.forEach((id) => renderReviews(id)));
 
 
