@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Australia</title>
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
-    <link href="./assets/css/custom.css" rel="stylesheet">
+    <link href="./public/css/bootstrap.css" rel="stylesheet">
+    <link href="./public/css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,23 +49,22 @@
         </div>
         <!-- /.row -->
 
-  <div class="row">
+        <div class="row">
             {{#each cities}}
             <div class="col-md-4 portfolio-item">
                 <a href="{{url}}">
-                    <img class="img-responsive" src="{{image}}" alt="{{city_name}}">
+                    <img class="img-responsive" src="{{image}}" alt="{{cityName}}">
                 </a>
                 <h3>
-                    <a href="{{url}}">{{city_name}}, {{state}}</a>
+                    <a href="{{url}}">{{cityName}}, {{state}}</a>
                 </h3>
                 <p>{{description}}</p>
             </div>
-            {{/each}}
         </div>
-    </div>
 
-    <script src="./assets/js/jquery-1.11.3.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+
+        <script src="./assets/js/jquery-1.11.3.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

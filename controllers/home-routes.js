@@ -81,6 +81,10 @@ router.get("/:name", async (req, res) => {
   }
 });
 
+
+
+
+
 //Get all Reviews for each city
 
 router.get("/reviews/:id", async (req, res) => {
@@ -113,4 +117,15 @@ router.get("/login", (req, res) => {
 
   res.render("login");
 });
+
+
+// for signup page 
+
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+
+
 module.exports = router;
