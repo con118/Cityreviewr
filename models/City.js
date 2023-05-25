@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class City extends Model {}
 
+// For city table
 City.init(
   {
     id: {
