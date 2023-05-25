@@ -4,27 +4,45 @@ const { City, Review, Todo } = require("../models");
 //const withAuth = require('../utils/auth');
 
 // Get all Cities for homepage
-router.get("/", async (req, res) => {
-  try {
-    console.log("routes");
-    const cityData = await City.findAll({
-      attributes: {
-        exclude: ["city_image", "city_description", "things_todo"],
-      },
-    });
+// router.get("/", async (req, res) => {
+//   try {
+//     console.log("routes");
+//     const cityData = await City.findAll({
+//       attributes: {
+//         exclude: ["city_image", "city_description", "things_todo"],
+//       },
+//     });
 
-    //console.log(cityData);
-    const cities = cityData.map((city) => city.get({ plain: true }));
+//     //console.log(cityData);
+//     const cities = cityData.map((city) => city.get({ plain: true }));
 
-    //res.status(200).json(cities);
+//     //res.status(200).json(cities);
 
-    res.render("homepage", {
-      cities,
-      loggedIn: req.session.loggedIn,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+//     res.render("index", {
+//       cities,
+//       loggedIn: req.session.loggedIn,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+// router.get('/', async (req, res) => {
+  
+
+    
+
+//     res.render('homepage', {
+     
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+router.get('/', (req, res) => {
+
+  res.render('homepage');
 });
 
 // Get single city by id for homepage
@@ -81,10 +99,6 @@ router.get("/:name", async (req, res) => {
   }
 });
 
-
-
-
-
 //Get all Reviews for each city
 
 router.get("/reviews/:id", async (req, res) => {
@@ -117,15 +131,4 @@ router.get("/login", (req, res) => {
 
   res.render("login");
 });
-
-
-// for signup page 
-
-
-router.get('/signup', (req, res) => {
-  res.render('signup');
-});
-
-
-
 module.exports = router;

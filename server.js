@@ -32,6 +32,7 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+console.log('Static files middleware connected');
 
 app.use(routes);
 
