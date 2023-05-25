@@ -8,18 +8,21 @@
     </div>
   </div>
   <!-- /.row -->
-
+<h1>hello world</h1>
   <div class="row">
-    {{#each cities}}
+    {{#each cities as |city|}}
     <div class="col-md-4 portfolio-item">
+      <h2>{{city_name}}</h2>
       <a href="{{url}}">
-        <img class="img-responsive" src="{{image}}" alt="{{cityName}}">
+        <img class="img-responsive" src="/images/{{city_name}}.png" alt="{{city_name}}">
       </a>
       <h3>
-        <a href="{{url}}">{{cityName}}, {{state}}</a>
+        <a href="{{url}}">{{city_name}}, {{state}}</a>
       </h3>
       <p>{{description}}</p>
     </div>
     {{/each}}
   </div>
+
+   
 </div>
