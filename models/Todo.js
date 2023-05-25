@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Todo extends Model {}
 
+//For todo table
 Todo.init(
   {
     id: {
