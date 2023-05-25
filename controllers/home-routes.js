@@ -40,9 +40,12 @@ const { City, Review, Todo } = require("../models");
 //   }
 // });
 
-router.get('/', (req, res) => {
-
-  res.render('homepage');
+router.get('/', async (req, res) => {
+  const cityData = await City.findAll().catch((err)=>{
+    res.json(err);
+  });
+  const cities = cityData.map((city) => city.get({plain: true}));
+  res.render('homepage', { cities }); // Pass the 'cities' data to the 'homepage' view
 });
 
 // Get single city by id for homepage
