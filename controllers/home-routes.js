@@ -37,19 +37,37 @@ const { City, Review, Todo } = require("../models");
 //   }
 // });
 
-router.get("/", async (req, res) => {
-  const cityData = await City.findAll().catch((err) => {
-    res.json(err);
-  });
-  const cities = cityData.map((city) => city.get({ plain: true }));
-  res.render("homepage", { cities }); // Pass the 'cities' data to the 'homepage' view
-});
+// router.get("/", async (req, res) => {
+//   const cityData = await City.findAll().catch((err) => {
+//     res.json(err);
+//   });
+//   const cities = cityData.map((city) => city.get({ plain: true }));
+//   res.render("homepage", { cities }); // Pass the 'cities' data to the 'homepage' view
+// });
 
-// Get single city by id for homepage
+// // Get single city by id for homepage
 
+// router.get("/city/:id", async (req, res) => {
+//   try {
+//     // console.log("cityone");
+//     const singleCityData = await City.findByPk(req.params.id, {
+//       include: { model: Review, model: Todo },
+//       attributes: {
+//         exclude: ["description", "image"],
+//       },
+//     });
+
+//     //console.log(singleCityData);
+
+//     //res.status(200).json(singleCityData);
+
+//     res.render("singleCity", { singleCityData });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 router.get("/city/:id", async (req, res) => {
   try {
-    // console.log("cityone");
     const singleCityData = await City.findByPk(req.params.id, {
       include: { model: Review, model: Todo },
       attributes: {
@@ -57,11 +75,34 @@ router.get("/city/:id", async (req, res) => {
       },
     });
 
-    //console.log(singleCityData);
+    const {
+      city_image: cityImage,
+      city_name: cityName,
+      city_description: cityDescription,
+    } = singleCityData;
 
-    //res.status(200).json(singleCityData);
+    // Extract the things to do and user reviews from related models
+    const cityThingsToDo = singleCityData.todos.map((todo) => ({
+      things_todo1: todo.things_todo1,
+      things_todo2: todo.things_todo2,
+      things_todo3: todo.things_todo3,
+      things_todo4: todo.things_todo4,
+      things_todo5: todo.things_todo5,
+    }));
 
-    res.render("singleCity", { singleCityData });
+    const cityUserReviews = singleCityData.reviews.map((review) => ({
+      title: review.title,
+      review: review.review,
+      username: review.username,
+    }));
+
+    res.render("singleCity", {
+      cityImage,
+      cityName,
+      cityDescription,
+      cityThingsToDo,
+      cityUserReviews,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
