@@ -4,7 +4,17 @@ const { User } = require("../../models");
 // CREATE new user(signup)
 //http://localhost:3001/api/user
 
-router.post("/", async (req, res) => {
+router.get("/signup", async(req, res) =>{
+  try {
+    res.render("signup"); // Render the signup.handlebars template
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+});
+
+router.post("/signup", async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -21,6 +31,16 @@ router.post("/", async (req, res) => {
 });
 
 //For Login
+router.get("/login", async (req, res) => {
+  try {
+    res.render("login"); // Render the login.handlebars template
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
