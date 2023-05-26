@@ -28,79 +28,70 @@ const { City, Review, Todo } = require("../models");
 // });
 
 // router.get('/', async (req, res) => {
-  
-
-    
 
 //     res.render('homepage', {
-     
+
 //     });
 //   } catch (err) {
 //     res.status(500).json(err);
 //   }
 // });
 
-router.get('/', async (req, res) => {
-  const cityData = await City.findAll().catch((err)=>{
+router.get("/", async (req, res) => {
+  const cityData = await City.findAll().catch((err) => {
     res.json(err);
   });
-  const cities = cityData.map((city) => city.get({plain: true}));
-  res.render('homepage', { cities }); // Pass the 'cities' data to the 'homepage' view
+  const cities = cityData.map((city) => city.get({ plain: true }));
+  res.render("homepage", { cities }); // Pass the 'cities' data to the 'homepage' view
 });
 
 // Get single city by id for homepage
 
-// router.get("/:id", async (req, res) => {
-//   try {
-//    // console.log("cityone");
-//     const singleCityData = await City.findByPk(req.params.id, {
-//       include: { model: Review, model: Todo },
-//       attributes: {
-//         exclude: ["description", "image"],
-//       },
-//     });
-
-//     //console.log(singleCityData);
-
-//     //res.status(200).json(singleCityData);
-
-//     res.render("singleCity", {
-//       singleCityData,
-//       loggedIn: req.session.loggedIn,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-//Single city by cityname
-
-router.get("/:name", async (req, res) => {
+router.get("/city/:id", async (req, res) => {
   try {
-    console.log(req.params.name);
-    const singleCityData = await City.findOne({
-      where: { city_name: req.params.name },
+    // console.log("cityone");
+    const singleCityData = await City.findByPk(req.params.id, {
       include: { model: Review, model: Todo },
       attributes: {
         exclude: ["description", "image"],
       },
     });
-    if (singleCityData === null) {
-      //res.status(400).json({ message: "No city found" });
-      res.redirect("/");
-    } else {
-      res.render("singleCity", {
-        singleCityData,
-        loggedIn: req.session.loggedIn,
-      });
-      //res.status(200).json(singleCityData);
-    }
 
     //console.log(singleCityData);
+
+    //res.status(200).json(singleCityData);
+
+    res.render("singleCity", { singleCityData });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+//Single city by cityname
+
+// router.get("/:name", async (req, res) => {
+//   try {
+//     console.log(req.params.name);
+//     const singleCityData = await City.findOne({
+//       where: { city_name: req.params.name },
+//       include: { model: Review, model: Todo },
+//       attributes: {
+//         exclude: ["description", "image"],
+//       },
+//     });
+//     if (singleCityData === null) {
+//       //res.status(400).json({ message: "No city found" });
+//       res.redirect("/");
+//     } else {
+//       res.render("singleCity", { singleCityData });
+//       //res.status(200).json(singleCityData);
+//     }
+
+//     //console.log(singleCityData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //Get all Reviews for each city
 
@@ -115,10 +106,7 @@ router.get("/reviews/:id", async (req, res) => {
     const reviews = reviewData.map((review) => review.get({ plain: true }));
 
     //res.status(200).json(reviews);
-    res.render("reviews", {
-      reviews,
-      loggedIn: req.session.loggedIn,
-    });
+    res.render("reviews", { reviews });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -127,10 +115,10 @@ router.get("/reviews/:id", async (req, res) => {
 //For Login page
 
 router.get("/login", (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
+  // if (req.session.loggedIn) {
+  //   res.redirect("/");
+  //   return;
+  // }
 
   res.render("login");
 });

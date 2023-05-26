@@ -3,7 +3,6 @@ const { Review } = require("../../models");
 //const withAuth = require('../../utils/auth');
 
 //Add new review
-// Use withAuth middleware to prevent access to route*********
 
 router.post("/submit-comment", async (req, res) => {
   try {
@@ -14,14 +13,10 @@ router.post("/submit-comment", async (req, res) => {
       //user_id: req.body.user_id,
       user_id: req.session.user_id,
     });
-    //Do we need session here************
 
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.status(200).json(newReview);
-    });
+    res.status(200).json(newReview);
+
     //res.redirect("/:city_id");Redirect from javaScript
-    //res.redirect(`/${city}`);*********need to check
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

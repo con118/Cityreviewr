@@ -12,13 +12,8 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
-    //need to start session**************
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      console.log("Successfully added a user");
-      res.status(200).json(dbUserData);
-      //Redirect from javaSript not here
-    });
+    console.log("Successfully added a user");
+    res.status(200).json(dbUserData);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -29,7 +24,6 @@ router.post("/", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
-      //check its username or email***********************
       where: {
         email: req.body.email,
       },
@@ -51,13 +45,9 @@ router.post("/login", async (req, res) => {
       return;
     }
 
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res
-        .status(200)
-        .json({ user: dbUserData, message: "You are now logged in!" });
-      //res.redirect("/"); Redirect from javaSript not here
-    });
+    res
+      .status(200)
+      .json({ user: dbUserData, message: "You are now logged in!" });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -66,15 +56,15 @@ router.post("/login", async (req, res) => {
 
 //Logout;
 router.post("/logout", (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
+  // if (req.session.loggedIn) {
+  req.session.destroy(() => {
+    res.status(204).end();
 
-      res.redirect("/");
-    });
-  } else {
-    res.status(404).end();
-  }
+    res.redirect("/");
+  });
+  // } else {
+  //   res.status(404).end();
+  // }
 });
 
 module.exports = router;
