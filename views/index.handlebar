@@ -52,11 +52,11 @@
         <div class="row">
             {{#each cities}}
             <div class="col-md-4 portfolio-item">
-                <a href="{{url}}">
+                <a href="{{/api/home//city/:id}}">
                     <img class="img-responsive" src="{{image}}" alt="{{cityName}}">
                 </a>
                 <h3>
-                    <a href="{{url}}">{{cityName}}, {{state}}</a>
+                    <a href="{{/city/:id}}">{{cityName}}, {{state}}</a>
                 </h3>
                 <p>{{description}}</p>
             </div>
