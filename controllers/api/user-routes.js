@@ -74,7 +74,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       console.log('loggedIn:', req.session.loggedIn); // Console log the value of loggedIn
-
+      console.log('login ::: session saved +++++++++++')
 
       res
         .status(200)
@@ -126,6 +126,7 @@ router.post('/logout', (req, res) => {
   // When the user logs out, destroy the session
   if (req.session.loggedIn) {
     req.session.destroy(() => {
+      console.log('logout::: session end ===============')
       res.status(204).end();
     });
   } else {

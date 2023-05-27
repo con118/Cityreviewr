@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
     res.json(err);
   });
   const cities = cityData.map((city) => city.get({ plain: true }));
-  res.render("homepage", { cities }); // Pass the 'cities' data to the 'homepage' view
+  res.render("homepage", { cities, loggedIn: req.session.loggedIn }); // Pass the 'cities' data to the 'homepage' view
 });
 
 // signuppage
