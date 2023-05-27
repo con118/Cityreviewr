@@ -5,7 +5,12 @@
     "image": "Sydney.png",
     "description": "The hipster's paradise, where you can grab a top-notch cuppa joe, scoff down some tucker from food trucks, and catch a ripper footy match at the 'G.",
     "city_image": "SydSlim.png",
-    "city_description": "Sydney is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia."
+    "city_description": "Sydney is the largest city in Australia, located on the east coast of the country. It is known for its beautiful beaches, stunning natural scenery, iconic landmarks, and diverse culture. The city has a population of over 5 million people and is a major economic and cultural center in Australia.",
+    "things_todo1": "Visit the Sydney Opera House",
+    "things_todo2": "Take a walk across the Sydney Harbour Bridge",
+    "things_todo3": "Explore the Royal Botanic Garden",
+    "things_todo4": "Relax on the beaches of Bondi and Manly",
+    "things_todo5": "Hike in the Blue Mountains"
   },
   {
     "city_name": "Melbourne",
@@ -13,7 +18,12 @@
     "image": "Melbourne.png",
     "description": "The land Down Under's biggest shebang, where you'll find fair dinkum beaches, ripper landmarks like the Opera House and Harbour Bridge, and bloody beautiful vibes, mate.",
     "city_image": "MelSlim.png",
-    "city_description": "Melbourne is the largest city in Australia, located on the southeast coast of the country. It is known for its vibrant arts scene, diverse culinary offerings, and sporting events. The city has a population of over 5 million people and is a major cultural, economic, and sporting hub in Australia."
+    "city_description": "Melbourne is the largest city in Australia, located on the southeast coast of the country. It is known for its vibrant arts scene, diverse culinary offerings, and sporting events. The city has a population of over 5 million people and is a major cultural, economic, and sporting hub in Australia.",
+    "things_todo1": "Visit the Federation Square",
+    "things_todo2": "Explore the Melbourne Cricket Ground (MCG)",
+    "things_todo3": "Stroll along the Yarra River",
+    "things_todo4": "Discover street art in Hosier Lane",
+    "things_todo5": "Experience the Queen Victoria Market"
   },
   {
     "city_name": "Hobart",
@@ -21,16 +31,25 @@
     "image": "Hobart.png",
     "description": "In Tassie's south, where the locals enjoy a cheeky pint at the pub, tuck into some scrumptious Tassie produce, and take in the bloody stunning views of Mount Wellington.",
     "city_image": "HobSlim.png",
-    "city_description": "Hobart is the capital city of Tasmania, an island state in Australia. It is located in the southeast part of the state and is known for its historic charm, picturesque waterfront, and natural beauty. With a population of over 200,000 people, Hobart offers a unique blend of culture, outdoor activities, and culinary delights."
+    "city_description": "Hobart is the capital city of Tasmania, an island state in Australia. It is located in the southeast part of the state and is known for its historic charm, picturesque waterfront, and natural beauty. With a population of over 200,000 people, Hobart offers a unique blend of culture, outdoor activities, and culinary delights.",
+    "things_todo1": "Explore the historic Salamanca Place and its vibrant market",
+    "things_todo2": "Visit the Museum of Old and New Art (MONA)",
+    "things_todo3": "Take a stroll through the Royal Tasmanian Botanical Gardens",
+    "things_todo4": "Enjoy a scenic drive up to Mount Wellington",
+    "things_todo5": "Embark on a cruise to explore the stunning waterways of Bruny Island"
   },
-
   {
     "city_name": "Adelaide",
     "state": "SA",
     "image": "Adelaide.png",
     "description": "A city known for its festivals, where you can sink a few frothies at the local pub, scoff a meat pie, and catch some ripper live music at the local pub.",
     "city_image": "AdSlim.png",
-    "city_description": "Adelaide is the capital city of South Australia, located on the southern coast of the country. Known for its relaxed lifestyle, elegant architecture, and thriving arts scene, Adelaide offers a unique blend of culture, natural beauty, and culinary delights. With a population of over 1.3 million people, it is a vibrant and cosmopolitan city."
+    "city_description": "Adelaide is the capital city of South Australia, located on the southern coast of the country. Known for its relaxed lifestyle, elegant architecture, and thriving arts scene, Adelaide offers a unique blend of culture, natural beauty, and culinary delights. With a population of over 1.3 million people, it is a vibrant and cosmopolitan city.",
+    "things_todo1": "Explore the picturesque Adelaide Botanic Garden",
+    "things_todo2": "Visit the Art Gallery of South Australia",
+    "things_todo3": "Discover the vibrant Central Market",
+    "things_todo4": "Take a stroll along the Adelaide Riverbank",
+    "things_todo5": "Experience the Adelaide Fringe Festival"
   },
   {
     "city_name": "Perth",
@@ -38,7 +57,12 @@
     "image": "Perth.png",
     "description": "Way out yonder in the west, where you'll find stunning beaches, unreal sunsets over the Indian Ocean, and legends with more sand in their thongs than on the beaches.",
     "city_image": "PerSlim.png",
-    "city_description": "Perth is the capital city of Western Australia, situated on the west coast of the country. Known for its pristine beaches, sunny climate, and relaxed lifestyle, Perth offers a unique blend of natural beauty and urban amenities. With a population of over 2 million people, it is one of the most isolated major cities in the world."
+    "city_description": "Perth is the capital city of Western Australia, situated on the west coast of the country. Known for its pristine beaches, sunny climate, and relaxed lifestyle, Perth offers a unique blend of natural beauty and urban amenities. With a population of over 2 million people, it is one of the most isolated major cities in the world.",
+    "things_todo1": "Relax on the white sands of Cottesloe Beach",
+    "things_todo2": "Explore the vibrant precinct of Northbridge for dining and nightlife",
+    "things_todo3": "Visit Kings Park and enjoy panoramic views of the city",
+    "things_todo4": "Take a ferry to Rottnest Island and meet the adorable quokkas",
+    "things_todo5": "Discover the historic port city of Fremantle and its markets"
   },
   {
     "city_name": "Gold Coast",
@@ -46,7 +70,12 @@
     "image": "GoldCoast.png",
     "description": "A sunny patch of heaven where the surf's always pumping, the theme parks are bonza, and the locals live the true beach bum lifestyle, mate.",
     "city_image": "GcSlim.png",
-    "city_description": "Gold Coast is a coastal city located in Queensland, Australia. Situated on the country east coast, it is renowned for its stunning beaches, sunny climate, and vibrant entertainment scene. With a population of over 600,000 people, Gold Coast is a popular tourist destination known for its theme parks, surfing spots, and bustling nightlife."
+    "city_description": "Gold Coast is a coastal city located in Queensland, Australia. Situated on the country east coast, it is renowned for its stunning beaches, sunny climate, and vibrant entertainment scene. With a population of over 600,000 people, Gold Coast is a popular tourist destination known for its theme parks, surfing spots, and bustling nightlife.",
+    "things_todo1": "Soak up the sun on Surfers Paradise Beach",
+    "things_todo2": "Experience thrilling rides and attractions at theme parks like Dreamworld and Warner Bros. Movie World",
+    "things_todo3": "Explore the natural beauty of Lamington National Park",
+    "things_todo4": "Indulge in shopping and dining at Broadbeach or Marina Mirage",
+    "things_todo5": "Take a leisurely stroll along the beachfront promenade of The Spit"
   },
   {
     "city_name": "Canberra",
@@ -54,7 +83,12 @@
     "image": "Canberra.png",
     "description": "The joint where all the pollies hang, mate. You'll find the bigwig parliament stuff going on, but also beaut bushwalks and ripper galleries to get cultured.",
     "city_image": "SydSlim.png",
-    "city_description": "Canberra is the capital city of Australia, situated in the Australian Capital Territory (ACT). Known for its well-planned layout, beautiful parks, and national monuments, Canberra is a city that combines natural beauty with political significance. With a population of over 400,000 people, it serves as the administrative center of the country."
+    "city_description": "Canberra is the capital city of Australia, situated in the Australian Capital Territory (ACT). Known for its well-planned layout, beautiful parks, and national monuments, Canberra is a city that combines natural beauty with political significance. With a population of over 400,000 people, it serves as the administrative center of the country.",
+    "things_todo1": "Visit the iconic Australian War Memorial",
+    "things_todo2": "Explore the National Gallery of Australia",
+    "things_todo3": "Take a tour of the Parliament House",
+    "things_todo4": "Enjoy the serene surroundings of Lake Burley Griffin",
+    "things_todo5": "Discover the cultural treasures at the National Museum of Australia"
   },
   {
     "city_name": "Darwin",
@@ -62,6 +96,11 @@
     "image": "Darwin.png",
     "description": "The Top End's tropical hub, where the weather's hotter than a barbie on Australia Day, crocs are as common as flies, and blokes knock back coldies at the local pub.",
     "city_image": "DarSlim.png",
-    "city_description": "Darwin is the capital city of the Northern Territory in Australia. Located on the northern coast, it is known for its tropical climate, rich Indigenous culture, and unique natural wonders. With a population of over 150,000 people, Darwin offers a laid-back atmosphere and serves as a gateway to the stunning landscapes of the Top End."
+    "city_description": "Darwin is the capital city of the Northern Territory in Australia. Located on the northern coast, it is known for its tropical climate, rich Indigenous culture, and unique natural wonders. With a population of over 150,000 people, Darwin offers a laid-back atmosphere and serves as a gateway to the stunning landscapes of the Top End.",
+    "things_todo1": "Explore the colorful Mindil Beach Sunset Market",
+    "things_todo2": "Visit the fascinating Museum and Art Gallery of the Northern Territory",
+    "things_todo3": "Take a cruise along the stunning Darwin Harbour",
+    "things_todo4": "Experience the vibrant energy of the Darwin Waterfront Precinct",
+    "things_todo5": "Embark on an adventure to the nearby Kakadu National Park"
   }
 ]
