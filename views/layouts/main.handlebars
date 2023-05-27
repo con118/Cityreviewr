@@ -31,7 +31,13 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/login">Log In</a>
+                          <!-- If the user is logged in, show a logout button -->
+                            {{#if loggedIn}}
+                            <a id="logout">Logout</a>
+                            {{else}}
+                            <!-- Otherwise, show a link to login -->
+                            <a href="/login">Login</a>
+                            {{/if}}
                     </li>
                 </ul>
             </div>
@@ -43,10 +49,14 @@
 
     {{{ body }}}
    </main>
+              <!-- If the user is logged in, load the JS script for when they logout -->
+            {{#if loggedIn}}
+            <script src="/js/logout.js"></script>
+            {{/if}}
 
-
-        <script src="./assets/js/jquery-1.11.3.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+   
 </body>
 
 </html>

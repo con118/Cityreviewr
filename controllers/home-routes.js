@@ -37,6 +37,25 @@ const { City, Review, Todo } = require("../models");
 //   }
 // });
 
+router.get("/", async (req, res) => {
+  const cityData = await City.findAll().catch((err) => {
+    res.json(err);
+  });
+  const cities = cityData.map((city) => city.get({ plain: true }));
+  res.render("homepage", { cities, loggedIn: req.session.loggedIn }); // Pass the 'cities' data to the 'homepage' view
+});
+
+// signuppage
+router.get("/signup", async(req, res) =>{
+  try {
+    res.render("signup"); // Render the signup.handlebars template
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+});
+
 // router.get("/", async (req, res) => {
 //   const cityData = await City.findAll().catch((err) => {
 //     res.json(err);
@@ -58,6 +77,7 @@ const { City, Review, Todo } = require("../models");
 //     });
 
 //     //console.log(singleCityData);
+
 
 //     //res.status(200).json(singleCityData);
 
@@ -155,12 +175,13 @@ router.get("/reviews/:id", async (req, res) => {
 
 //For Login page
 
-router.get("/login", (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect("/");
-  //   return;
-  // }
-
-  res.render("login");
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect to the homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  // Otherwise, render the 'login' template
+  res.render('login');
 });
 module.exports = router;

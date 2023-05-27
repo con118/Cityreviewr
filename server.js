@@ -37,37 +37,37 @@ const isAuthenticated = (req, res, next) => {
   res.redirect('/login'); // Redirect to login page if not authenticated
 };
 
-// Login route
-app.get('/login', (req, res) => {
-  res.render('login'); // Assuming you have a login view file (login.handlebars)
-});
+// // Login route
+// app.get('/login', (req, res) => {
+//   res.render('login'); // Assuming you have a login view file (login.handlebars)
+// });
 
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
+// app.post('/login', (req, res) => {
+//   const { username, password } = req.body;
   
-  // Check if username and password match (Replace with your authentication logic)
-  if (username === 'admin' && password === 'password') {
-    req.session.isAuthenticated = true; // Set isAuthenticated flag in the session
-    res.redirect('/dashboard');
-  } else {
-    res.send('Invalid username or password');
-  }
-});
+//   // Check if username and password match (Replace with your authentication logic)
+//   if (username === 'admin' && password === 'password') {
+//     req.session.isAuthenticated = true; // Set isAuthenticated flag in the session
+//     res.redirect('/dashboard');
+//   } else {
+//     res.send('Invalid username or password');
+//   }
+// });
 
-// Dashboard route (requires authentication)
-app.get('/dashboard', isAuthenticated, (req, res) => {
-  res.render('dashboard'); // Assuming you have a dashboard view file (dashboard.handlebars)
-});
+// // Dashboard route (requires authentication)
+// app.get('/dashboard', isAuthenticated, (req, res) => {
+//   res.render('dashboard'); // Assuming you have a dashboard view file (dashboard.handlebars)
+// });
 
-// Logout route
-app.get('/logout', (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      console.error('Error destroying session:', err);
-    }
-    res.redirect('/login');
-  });
-});
+// // Logout route
+// app.get('/logout', (req, res) => {
+//   req.session.destroy((err) => {
+//     if (err) {
+//       console.error('Error destroying session:', err);
+//     }
+//     res.redirect('/login');
+//   });
+// });
 
 app.use(routes);
 
