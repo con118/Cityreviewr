@@ -45,6 +45,17 @@ router.get("/", async (req, res) => {
   res.render("homepage", { cities }); // Pass the 'cities' data to the 'homepage' view
 });
 
+// signuppage
+router.get("/signup", async(req, res) =>{
+  try {
+    res.render("signup"); // Render the signup.handlebars template
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+
+});
+
 // Get single city by id for homepage
 
 router.get("/city/:id", async (req, res) => {
@@ -114,12 +125,13 @@ router.get("/reviews/:id", async (req, res) => {
 
 //For Login page
 
-router.get("/login", (req, res) => {
-  // if (req.session.loggedIn) {
-  //   res.redirect("/");
-  //   return;
-  // }
-
-  res.render("login");
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect to the homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  // Otherwise, render the 'login' template
+  res.render('login');
 });
 module.exports = router;
