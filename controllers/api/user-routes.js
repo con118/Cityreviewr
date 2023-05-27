@@ -134,4 +134,10 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/comment', (req, res) => {
+
+  // Otherwise, render the 'login' template
+  res.render('comment');
+});
+
 module.exports = router;
