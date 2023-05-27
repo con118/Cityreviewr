@@ -4,11 +4,12 @@ const commentFormHandler = async (event) => {
   const reviewTitle = document.querySelector("#title").value.trim();
   const review = document.querySelector("#comment").value.trim();
 
+  alert(reviewTitle,review);
   console.log(reviewTitle, review);
   //Where can i get city_id***********
 
   if (reviewTitle && review) {
-    const response = await fetch("/api/reviews/submit-comment", {
+    const response = await fetch("/api/review/submit-comment", {
       method: "POST",
       body: JSON.stringify({ reviewTitle, review, city_id }),
       headers: { "Content-Type": "application/json" },
@@ -29,5 +30,5 @@ const commentFormHandler = async (event) => {
 //   .addEventListener("submit", commentFormHandler);
 
 document
-  .querySelector(".submitButton")
-  .addEventListener("click", commentFormHandler);
+  .querySelector(".submit_form")
+  .addEventListener("submit", commentFormHandler);

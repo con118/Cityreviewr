@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { City, Review, Todo } = require("../models");
+const { City, Review} = require("../models");
 
 //const withAuth = require('../utils/auth');
 
@@ -46,7 +46,7 @@ router.get("/", async (req, res) => {
 });
 
 // signuppage
-router.get("/signup", async(req, res) =>{
+router.get("/signup", async (req, res) => {
   try {
     res.render("signup"); // Render the signup.handlebars template
   } catch (err) {
@@ -65,68 +65,22 @@ router.get("/signup", async(req, res) =>{
 // });
 
 // // Get single city by id for homepage
-
-// router.get("/city/:id", async (req, res) => {
-//   try {
-//     // console.log("cityone");
-//     const singleCityData = await City.findByPk(req.params.id, {
-//       include: { model: Review, model: Todo },
-//       attributes: {
-//         exclude: ["description", "image"],
-//       },
-//     });
-
-//     //console.log(singleCityData);
-
-
-//     //res.status(200).json(singleCityData);
-
-//     res.render("singleCity", { singleCityData });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-router.get("/city/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const singleCityData = await City.findByPk(req.params.id, {
-      include: { model: Review, model: Todo },
+      include: [{ model: Review }],
       attributes: {
         exclude: ["description", "image"],
       },
     });
-
-    const {
-      city_image: cityImage,
-      city_name: cityName,
-      city_description: cityDescription,
-    } = singleCityData;
-
-    // Extract the things to do and user reviews from related models
-    const cityThingsToDo = singleCityData.todos.map((todo) => ({
-      things_todo1: todo.things_todo1,
-      things_todo2: todo.things_todo2,
-      things_todo3: todo.things_todo3,
-      things_todo4: todo.things_todo4,
-      things_todo5: todo.things_todo5,
-    }));
-
-    const cityUserReviews = singleCityData.reviews.map((review) => ({
-      title: review.title,
-      review: review.review,
-      username: review.username,
-    }));
-
-    res.render("singleCity", {
-      cityImage,
-      cityName,
-      cityDescription,
-      cityThingsToDo,
-      cityUserReviews,
-    });
+    //console.log(singleCityData);
+    // res.status(200).json(singleCityData);
+    res.render("singleCity", { singleCityData });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 //Single city by cityname
 
@@ -185,3 +139,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 module.exports = router;
+
+
+
+

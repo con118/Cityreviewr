@@ -36,6 +36,26 @@ City.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    things_todo1: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    things_todo2: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    things_todo3: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    things_todo4: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    things_todo5: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    }
   },
   {
     sequelize,

@@ -1,33 +1,35 @@
-
+<div>
+    {{#each singleCityData as |city|}}
     <header>
-        <img src="{{cityImage}}" alt="City skyline" width="100%" height="100%">
+        <img src="/images/{{city.city_image}}" alt="City skyline" width="100%" height="100%">
     </header>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>About {{cityName}}</h2>
-                <p>{{cityDescription}}</p>
-                <h2>Things to Do</h2>
-                <ul>
-                    {{#each cityThingsToDo}}
-                    <li>{{this.things_todo1}}</li>
-                    <li>{{this.things_todo2}}</li>
-                    <li>{{this.things_todo3}}</li>
-                    <li>{{this.things_todo4}}</li>
-                    <li>{{this.things_todo5}}</li>
-                    {{/each}}
-                </ul>
+                <div>
+                    <h2>About {{city.city_name}}</h2>
+                    <p>{{city.city_description}}</p>
+                </div>
+                <div>
+                    <h2>Things to Do</h2>
+                    <ul>
+                        <li>{{city.things_todo1}}</li>
+                        <li>{{city.things_todo2}}</li>
+                        <li>{{city.things_todo3}}</li>
+                        <li>{{city.things_todo4}}</li>
+                        <li>{{city.things_todo5}}</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-6">
                 <h2>User Reviews</h2>
-                {{#each cityUserReviews}}
                 <div class="review">
-                    <h3>{{this.title}}</h3>
-                    <p>{{this.review}}</p>
-                    <p><strong>Posted by:</strong> {{this.username}}</p>
+                    <h3>{{city.title}}</h3>
+                    <p>{{city.reviews}}</p>
+                    <a href="/api/user/comment" class="btn btn-lg btn-secondary btn-block">Add Your Review</a>
                 </div>
-                {{/each}}
             </div>
         </div>
     </div>
-
+    {{/each}}
+</div>
