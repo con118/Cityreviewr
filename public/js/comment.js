@@ -1,34 +1,26 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const reviewTitle = document.querySelector("#title").value.trim();
-  const review = document.querySelector("#comment").value.trim();
+  const title = document.querySelector("#title").value.trim();
+  const reviews = document.querySelector("#comment").value.trim();
+  const city_id = 1;
 
-  alert(reviewTitle,review);
-  console.log(reviewTitle, review);
+  console.log(title, reviews);
   //Where can i get city_id***********
-
-  if (reviewTitle && review) {
+  if (title && reviews) {
     const response = await fetch("/api/review/submit-comment", {
       method: "POST",
-      body: JSON.stringify({ reviewTitle, review, city_id }),
+      body: JSON.stringify({ title, reviews, city_id }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       // document.location.replace(`/${city_id}`);
-
       alert("review added");
     } else {
       alert("Failed to added new review.");
     }
   }
 };
-
-// document
-//   .querySelector(".comment-form")
-//   .addEventListener("submit", commentFormHandler);
-
 document
   .querySelector(".submit_form")
   .addEventListener("submit", commentFormHandler);
