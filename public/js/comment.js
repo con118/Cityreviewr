@@ -3,7 +3,7 @@ const commentFormHandler = async (event) => {
 
   const title = document.querySelector("#title").value.trim();
   const reviews = document.querySelector("#comment").value.trim();
-  const city_id = 1;
+  const city_id = document.querySelector("#cityId").value.trim();
 
   console.log(title, reviews);
   //Where can i get city_id***********
@@ -14,7 +14,7 @@ const commentFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      // document.location.replace(`/${city_id}`);
+      document.location.replace(`/${city_id}`);
       alert("review added");
     } else {
       alert("Failed to added new review.");

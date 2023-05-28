@@ -14,7 +14,7 @@ router.post("/submit-comment", async (req, res) => {
       //user_id: req.body.user_id,
       // user_id: req.session.user_id,
     });
-
+    console.log("Added values in the database");
     res.status(200).json(newReview);
 
     //res.redirect("/:city_id");Redirect from javaScript
