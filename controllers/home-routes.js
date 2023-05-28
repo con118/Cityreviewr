@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { City, Review } = require("../models");
+const { City, Review, User } = require("../models");
 
 //const withAuth = require('../utils/auth');
 
@@ -23,17 +23,38 @@ router.get("/signup", async (req, res) => {
   }
 });
 
+//For Login page
+router.get("/login", (req, res) => {
+  try {
+    console.log("HIT", req.session.loggedIn);
+    // If the user is already logged in, redirect to the homepage
+    if (req.session.loggedIn) {
+      return res.redirect("/");
+    }
+    // Otherwise, render the 'login' template
+    res.render("login");
+  } catch (error) {
+    console.error("\n", error.message, "\n");
+  }
+});
+
 // Get single city by id for homepage
 router.get("/:id", async (req, res) => {
   console.log(req.params.id);
   try {
     const singleCityData = await City.findByPk(req.params.id, {
-      include: [{ model: Review }],
+      include: [
+        {
+          model: Review,
+          include: [{ model: User, attributes: ["username"] }],
+        },
+      ],
       attributes: {
         exclude: ["description", "image"],
       },
     });
     const singleCity = singleCityData.get({ plain: true });
+    console.log(singleCity.reviews[0].user);
     res.render("singleCity", { singleCity });
   } catch (err) {
     res.status(500).json(err);
@@ -59,15 +80,4 @@ router.get("/reviews/:id", async (req, res) => {
   }
 });
 
-//For Login page
-
-router.get("/login", (req, res) => {
-  // If the user is already logged in, redirect to the homepage
-  if (req.session.loggedIn) {
-    res.redirect("/");
-    return;
-  }
-  // Otherwise, render the 'login' template
-  res.render("login");
-});
 module.exports = router;

@@ -1,41 +1,50 @@
 <div>
-    <header>
-        <img src="/images/{{singleCity.city_image}}" alt="City skyline" width="100%" height="100%" />
-    </header>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div>
-                    <h2>About {{singleCity.city_name}}</h2>
-                    <p>{{singleCity.city_description}}</p>
-                </div>
-                <div>
-                    <h2>Things to Do</h2>
-                    <ul>
-                        <li>{{singleCity.things_todo1}}</li>
-                        <li>{{singleCity.things_todo2}}</li>
-                        <li>{{singleCity.things_todo3}}</li>
-                        <li>{{singleCity.things_todo4}}</li>
-                        <li>{{singleCity.things_todo5}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h2>User Reviews</h2>
-                <div class="review">
-                    {{#each singleCity.reviews as |reviews|}}
-                    <h3>{{reviews.title}}</h3>
-                    <p>{{reviews.reviews}}</p>
-                    <p>{{reviews.created_date}}</p>
-                    {{/each}}
-                    <a href="/api/user/comment" onclick="location.href=this.href+'?xyz='+val;return false;"
-                        class="btn btn-lg btn-secondary btn-block">Add Your Review</a>
-                </div>
-            </div>
+  <header>
+    <img
+      src="/images/{{singleCity.city_image}}"
+      alt="City skyline"
+      width="100%"
+      height="50%"
+    />
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <h2>About {{singleCity.city_name}}</h2>
+          <p>{{singleCity.city_description}}</p>
         </div>
+        <div>
+          <h2>Things to Do</h2>
+          <ul>
+            <li>{{singleCity.things_todo1}}</li>
+            <li>{{singleCity.things_todo2}}</li>
+            <li>{{singleCity.things_todo3}}</li>
+            <li>{{singleCity.things_todo4}}</li>
+            <li>{{singleCity.things_todo5}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>User Reviews</h2>
+        <div class="review">
+          {{#each singleCity.reviews as |reviews|}}
+            <h3>{{reviews.title}}</h3>
+            <p>{{reviews.reviews}}</p>
+            <p>{{reviews.created_date}},{{reviews.user.username}}</p>
+          {{/each}}
+          <a
+            href="/api/user/comment"
+            onclick="location.href=this.href+'?xyz='+val;return false;"
+            class="btn btn-lg btn-secondary btn-block"
+          >Add Your Review</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <script>
-    var val = {{ singleCity.id }}; //console.log("hello");
+  var val =
+  {{singleCity.id}}; //console.log("hello");
 </script>
