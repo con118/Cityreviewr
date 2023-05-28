@@ -25,6 +25,7 @@ router.get("/signup", async (req, res) => {
 
 // Get single city by id for homepage
 router.get("/:id", async (req, res) => {
+  console.log(req.params.id);
   try {
     const singleCityData = await City.findByPk(req.params.id, {
       include: [{ model: Review }],
@@ -32,7 +33,6 @@ router.get("/:id", async (req, res) => {
         exclude: ["description", "image"],
       },
     });
-
     const singleCity = singleCityData.get({ plain: true });
     res.render("singleCity", { singleCity });
   } catch (err) {

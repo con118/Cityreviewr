@@ -14,12 +14,13 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h2>Add a Comment</h2>
-            <form action="/submit-comment" class="submit_form" method="POST">
+            <form class="submit_form" method="POST">
                 <div class="comment-form">
                     <label for="comment">Title:</label>
                     <textarea class="form-control" id="title" name="title" rows="5" required></textarea>
                     </select>
                 </div>
+                <input type="hidden" name="cityId" id="cityId" value="{{cityId}}">
                 <div class="comment-form">
                     <label for="comment">Comment:</label>
                     <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
@@ -32,3 +33,5 @@
         </div>
     </div>
 </div>
+
+<script src="/js/comment.js"></script>

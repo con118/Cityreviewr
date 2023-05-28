@@ -20,6 +20,11 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    created_date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -33,7 +38,7 @@ Review.init(
         model: "city",
         key: "id",
       },
-    },
+    }
   },
   {
     sequelize,
