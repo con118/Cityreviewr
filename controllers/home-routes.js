@@ -55,7 +55,7 @@ router.get("/:id", async (req, res) => {
     });
     const singleCity = singleCityData.get({ plain: true });
     console.log(singleCity.reviews[0].user);
-    res.render("singleCity", { singleCity });
+    res.render("singleCity", { singleCity, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
