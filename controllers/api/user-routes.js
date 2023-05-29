@@ -87,7 +87,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/comment', (req, res) => {
-  // Otherwise, render the 'login' template
+  // Passing cityId to comment page
   res.render('comment', { cityId: req.query['xyz'] });
 });
 
