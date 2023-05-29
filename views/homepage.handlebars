@@ -10,18 +10,21 @@
   <!-- /.row -->
   <div class="row">
     {{#each cities as |city|}}
-    <div class="col-md-3 portfolio-item">
-      {{!-- <h2>{{city_name}}</h2> --}}
-      <a href="/{{city.id}}">
-        <img class="img-responsive" src="/images/{{city_name}}.png" alt="{{city_name}}">
-      </a>
-      <h3>
-        <a href="/{{city.id}}">{{city_name}}, {{state}}</a>
-      </h3>
-      <p>{{description}}</p>
-    </div>
+      <div class="col-md-3 portfolio-item">
+        {{!-- <h2>{{city_name}}</h2> --}}
+        <a href="/{{city.id}}">
+          <img
+            class="img-responsive"
+            src="/images/{{city_name}}.png"
+            alt="{{city_name}}"
+          />
+        </a>
+        <h3>
+          <a href="/{{city.id}}">{{city_name}}, {{state}}</a>
+        </h3>
+        <p>{{description}}</p>
+      </div>
     {{/each}}
   </div>
-
 
 </div>

@@ -19,8 +19,38 @@
   },
   {
     "title": "Hobart neighbourhoods",
-    "reviews": "I loved my visit to Hobart. The city has a great mix of urban and natural environments, which makes it really unique. I especially enjoyed exploring the various neighbourhoods and trying the di",
+    "reviews": "I loved my visit to Hobart. The city has a great mix of urban and natural environments, which makes it really unique. I especially enjoyed exploring the various neighbourhoods and trying the discover.",
     "user_id": 2,
     "city_id": 3
+  },
+  {
+    "title": "Adelaide heritage",
+    "reviews": "The city has a rich history, and its heritage buildings are a delight to explore.",
+    "user_id": 2,
+    "city_id": 5
+  },
+  {
+    "title": "Gold Coast Fun",
+    "reviews": "The beaches are pristine, with golden sands and clear waters. The city has a vibrant energy, and there's always something happening.",
+    "user_id": 2,
+    "city_id": 6
+  },
+  {
+    "title": "Canberra wine",
+    "reviews": "The city's well-preserved natural areas and walking trails are perfect for outdoor enthusiasts.",
+    "user_id": 1,
+    "city_id": 7
+  },
+  {
+    "title": "Darwin parks",
+    "reviews": " The city's proximity to stunning national parks like Kakadu and Litchfield is a major drawcard.",
+    "user_id": 2,
+    "city_id": 8
+  },
+  {
+    "title": "Perth relax",
+    "reviews": "The beaches are pristine, and the water is crystal clear. The city itself is vibrant, with a growing food and arts scene.",
+    "user_id": 2,
+    "city_id": 4
   }
 ]

@@ -4,6 +4,7 @@ body {
 
 .portfolio-item {
   margin-bottom: 25px;
+  max-height: 310px;
 }
 
 footer {
@@ -22,8 +23,8 @@ footer {
 }
 
 .container-row {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    padding: 50px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  padding: 50px;
+}
