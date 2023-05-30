@@ -48,12 +48,40 @@
 
           {{/if}}
         </div>
+
+
+
+
       </div>
     </div>
   </div>
+  <div id="map" data-lat="{{lat}}" data-lng="{{lng}}"></div>
+
+<script>
+  function initMap() {
+
+    console.log('initMap is being called');
+    var mapDiv = document.getElementById('map');
+    var lat = parseFloat(mapDiv.getAttribute('data-lat'));
+    var lng = parseFloat(mapDiv.getAttribute('data-lng'));
+
+    console.log("Lat: " + lat + ", Lng: " + lng); 
+
+    var city = {lat: lat, lng: lng};
+    var map = new google.maps.Map(mapDiv, {zoom: 13, center: city});
+    var marker = new google.maps.Marker({position: city, map: map});
+  }
+</script>
+
+
+
+
+        
 </div>
 
 <script>
   var val =
   {{singleCity.id}}; //console.log("hello");
 </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1L6G-zvkucPsG9X4UPmdxq1SaugJ_0u4&callback=initMap"></script>

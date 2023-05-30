@@ -15,7 +15,7 @@ const commentFormHandler = async (event) => {
     });
     if (response.ok) {
       document.location.replace(`/${city_id}`);
-      alert("review added");
+      //alert("review added");
     } else {
       alert("Failed to added new review.");
     }
