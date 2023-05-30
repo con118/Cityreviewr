@@ -40,7 +40,7 @@
 
 ## Screenshots
 
-![ScreenShot of the Project](public/images/Screenshot.png)
+![ScreenShot of the Project]([https://i.ibb.co/yypn7Bt/Screen-Shot-2023-03-30-at-9-38-38-am.png](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
 
 
 ## Badges & License
