@@ -1,11 +1,6 @@
-# Overview
+# Overview of the Cityreviewr
 
-***
-
-## How to inintialize
-1. 
-
-***
+"Introducing CityReviewr, the ultimate platform for city explorers! Whether you're a traveller seeking authentic experiences or a local wanting to share your insights, CityReviewr is your go-to web app. Easily register, log in, and leave honest reviews about cities you've visited, helping fellow adventurers make informed decisions. From hidden gems to popular attractions, CityReviewr empowers you to share your unique perspective and discover new destinations. Join the CityReviewr community today and unlock a world of shared experiences!"
 
 ## Authors
 - [@StevenDong] (https://github.com/StevenDong2512)
@@ -35,9 +30,9 @@
 
 ## Documentation
 
-[Powerpoint-doc] 
+[Presentation-Canva](https://www.canva.com/design/DAFkWGE6URk/4LrXhCZAIa7-7kbaC9eYzQ/edit?utm_content=DAFkWGE6URk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
-[Google-Doc] 
+[Google-Doc](https://docs.google.com/document/d/1X-qRjQeEKvMLnLZvSOgmJNALwKP5snul5ZEGWfB9kyY/edit?usp=sharing)
 
 ## Screenshots
 
@@ -117,7 +112,7 @@ This project is graded based on the following criteria:
 
 #### Why did we choose to base our project around 
 
-We choosey
+We choose to combine our intrests and make a full stack! Traveling was our focus
 
 #### What is the concept of the project 
 
