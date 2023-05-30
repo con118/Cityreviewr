@@ -17,7 +17,7 @@
 
 ## Screenshot
 
-[Screenshot](https://file.io/EWjSOwCnAPC9)
+![screenshot](https://postimg.cc/Vd2Y5h92)
 
 ## Technology's used
 -NMP Package (Axios Map Package)
