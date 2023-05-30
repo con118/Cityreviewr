@@ -1,5 +1,24 @@
 const router = require("express").Router();
 const { City, Review, User } = require("../models");
+const axios = require('axios');
+
+// gmaps name to lat and lng sing axios
+
+async function getLatLng(city) {
+  try {
+    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(city)}&key=AIzaSyC1L6G-zvkucPsG9X4UPmdxq1SaugJ_0u4`);
+      const data = response.data;
+      if (data.results && data.results.length > 0) {
+          const location = data.results[0].geometry.location;
+          return location; 
+      } else {
+          throw new Error('No results for that address');
+      }
+  } catch (error) {
+      console.error(error);
+  }
+}
+
 
 //const withAuth = require('../utils/auth');
 
@@ -40,6 +59,12 @@ router.get("/login", (req, res) => {
 
 // Get single city by id for homepage
 router.get("/:id", async (req, res) => {
+
+    // Check if req.params.id is a number
+    if (isNaN(req.params.id)) {
+      res.status(404).send("Page not found");
+      return;
+    }
   console.log(req.params.id);
   try {
     const singleCityData = await City.findByPk(req.params.id, {
@@ -55,7 +80,26 @@ router.get("/:id", async (req, res) => {
     });
     const singleCity = singleCityData.get({ plain: true });
     console.log(singleCity.reviews[0].user);
-    res.render("singleCity", { singleCity, loggedIn: req.session.loggedIn });
+
+    
+  // get lat and lng for the city name
+  let latLng;
+  try {
+    latLng = await getLatLng(singleCity.city_name);
+  } catch (err) {
+    console.error(`Unable to get coordinates for city: ${singleCity.city_name}`);
+    // handle error, for example by sending an error response or redirecting
+    res.status(500).send("Unable to get coordinates for city");
+    return;
+  }
+  // pass lat and lng to the view
+  res.render("singleCity", { 
+      singleCity, 
+      loggedIn: req.session.loggedIn, 
+      lat: latLng.lat, 
+      lng: latLng.lng  
+
+      });
   } catch (err) {
     res.status(500).json(err);
   }
