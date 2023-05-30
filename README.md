@@ -14,6 +14,10 @@
 -User has the ability to login and logout 
 -User has the ability to leave reviews
 
+## Screenshot
+
+[Screenshot](https://file.io/EWjSOwCnAPC9)
+
 ## Technology's used
 -NMP Package (Axios Map Package)
 
