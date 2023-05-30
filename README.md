@@ -2,35 +2,36 @@
 
 ***
 
-## How It Works
+## How to inintialize
+1. 
 
 ***
 
 ## Authors
-
-- [@Anna] (https://github.com/tomato23d)
 - [@StevenDong] (https://github.com/StevenDong2512)
 - [@ShibyMathew] (https://github.com/Shiby-Mathew)
 - [@ConnorMcNaught] (https://github.com/con118)
+- [@AdamShalala] (https://github.com/supershalala)
 
 ## Features of The Web App
+-Accessing 6 of Australias biggest citys 
+-Visualizing a google map of the city
+-User has the ability to login and logout 
+-User has the ability to leave reviews
 
-**
+## Technology's used
+-NMP Package (Axios Map Package)
 
-## Color Reference
-
-| CSS Color Code               | Example Color | Preview                                                  |
-| ---------------------------- | ------------- | -------------------------------------------------------- |
-| `color: #***`               | `#fff`        | ![#fff](https://via.placeholder.com/10/ffffff?text=+)    |
-| `color: #***;`            | `#E9E8E8`     | ![#E9E8E8](https://via.placeholder.com/10/E9E8E8?text=+) |
-| `color: #***;`            | `#DC5F00`     | ![#DC5F00](https://via.placeholder.com/10/DC5F00?text=+) |
-| `color: #***;`            | `#EEEEEE`     | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) |
-| `background-color: #20262E;` | `#20262E`     | ![#20262E](https://via.placeholder.com/10/20262E?text=+) |
+## Directions for future development 
+- Gamifycation and
+- Enhanced personalization
+- Social media intergration
+- Addition of a booking experence
 
 ## Demo
 
-- [Link To The Repository](https xxx)
-- [Link To The Demo Site](https xxx)
+- [Link To The Repository](https://github.com/con118/Travel-Aus)
+- [Link To The Demo Site](https://cityreviwr.herokuapp.com)
 
 ## Documentation
 
@@ -112,19 +113,13 @@ This project is graded based on the following criteria:
 
 * The URL of the GitHub repository, with a unique name and a README describing the project.
 
-
-## Acknowledgements/ Reference
-*
-*
-*
-*
-*
-
 ## FAQ
 
-#### Why did we choose to base our project around xxx
+#### Why did we choose to base our project around 
 
-*
+We choosey
+
+#### What is the concept of the project 
 
 The concept of the project is to provide a comprehensive and up-to-date resource for information about SpaceX launches. It aims to be a one-stop-shop for anyone interested in following SpaceX's latest launches, providing a range of features and interactive tools to help users stay informed and engaged with the space industry.
 
