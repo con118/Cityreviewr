@@ -16,6 +16,7 @@
 -User after log in has the ability to leave reviews.
 -Users are able to see the post of their own as well as from other users.
 
+
 ## Technology's used
 -NMP Package (Axios Map Package)
 -Express.js
@@ -42,6 +43,7 @@
 [Presentation-Canva](https://www.canva.com/design/DAFkWGE6URk/4LrXhCZAIa7-7kbaC9eYzQ/edit?utm_content=DAFkWGE6URk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
 [Google-Doc](https://docs.google.com/document/d/1X-qRjQeEKvMLnLZvSOgmJNALwKP5snul5ZEGWfB9kyY/edit?usp=sharing)
+
 
 ## Screenshots
 
@@ -119,8 +121,3 @@ With commment posted, user will then see their reviews being posted on landing p
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/))
 
 
-## Badges & License
-
-[MIT License](https://choosealicense.com/licenses/mit/)
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
