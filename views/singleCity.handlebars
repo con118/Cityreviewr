@@ -1,6 +1,7 @@
 <div>
   <header>
     <img
+      class="img-responsive"
       src="/images/{{singleCity.city_image}}"
       alt="City skyline"
       width="100%"
@@ -12,10 +13,14 @@
       <div class="col-md-6">
         <div>
           <h2>About {{singleCity.city_name}}</h2>
+                  <hr class="hr-line">
+
           <p>{{singleCity.city_description}}</p>
         </div>
         <div>
           <h2>Things to Do</h2>
+                  <hr class="hr-line">
+
           <ul>
             <li>{{singleCity.things_todo1}}</li>
             <li>{{singleCity.things_todo2}}</li>
@@ -27,6 +32,8 @@
       </div>
       <div class="col-md-6">
         <h2>User Reviews</h2>
+        <hr class="hr-line">
+
         <div class="review">
           {{#each singleCity.reviews as |reviews|}}
             <h3>{{reviews.title}}</h3>
