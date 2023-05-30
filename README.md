@@ -40,7 +40,7 @@
 
 ## Screenshots
 
-![ScreenShot of the Project] (./public/images/Screenshot.png)
+![ScreenShot of the Project](https://postimg.cc/Vd2Y5h92)
 
 
 ## Badges & License
