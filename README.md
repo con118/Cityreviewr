@@ -9,23 +9,31 @@
 - [@AdamShalala] (https://github.com/supershalala)
 
 ## Features of The Web App
--Accessing 6 of Australias biggest citys 
--Visualizing a google map of the city
--User has the ability to login and logout 
--User has the ability to leave reviews
+-Accessing 8 of Australian biggest citys.
+-Visualising a google map of the city on landing page.
+-User has the ability to login and logout.
+-User after log in has the ability to leave reviews.
+-Users are able to see the post of their own as well as from other users.
 
-## Screenshots
+## Screenshot
 
-![screenshot](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
+[Screenshot](https://file.io/EWjSOwCnAPC9)
 
 ## Technology's used
 -NMP Package (Axios Map Package)
+-Express.js
+-Express-handlebars
+-Node.js
+-Sequelize
+-MySQL
+-Heroku
 
 ## Directions for future development 
-- Gamifycation and
+- Gamifycation and Rewards
 - Enhanced personalization
 - Social media intergration
 - Addition of a booking experence
+- Seamless booking experience
 
 ## Demo
 
@@ -37,6 +45,11 @@
 [Presentation-Canva](https://www.canva.com/design/DAFkWGE6URk/4LrXhCZAIa7-7kbaC9eYzQ/edit?utm_content=DAFkWGE6URk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
 [Google-Doc](https://docs.google.com/document/d/1X-qRjQeEKvMLnLZvSOgmJNALwKP5snul5ZEGWfB9kyY/edit?usp=sharing)
+
+## Screenshots
+
+![screenshot](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
+
 
 ## Badges & License
 
