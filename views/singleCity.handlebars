@@ -31,18 +31,20 @@
           {{#each singleCity.reviews as |reviews|}}
             <h3>{{reviews.title}}</h3>
             <p>{{reviews.reviews}}</p>
-            <p>{{reviews.created_date}},{{reviews.user.username}}</p>
+            <p>Created by
+              {{reviews.user.username}}, on
+              {{reviews.created_date}}</p>
           {{/each}}
 
           {{#if loggedIn}}
-          <a
-            href="/api/user/comment"
-            onclick="location.href=this.href+'?xyz='+val;return false;"
-            class="btn btn-lg btn-secondary btn-block"
-          >Add Your Review</a>
+            <a
+              href="/api/user/comment"
+              onclick="location.href=this.href+'?xyz='+val;return false;"
+              class="btn btn-lg btn-secondary btn-block"
+            >Add Your Review</a>
           {{else}}
 
-          <a href="/login">Please Login to add a review</a>
+            <a href="/login">Please Login to add a review</a>
 
           {{/if}}
         </div>
