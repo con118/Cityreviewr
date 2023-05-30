@@ -14,9 +14,9 @@
 -User has the ability to login and logout 
 -User has the ability to leave reviews
 
-## Screenshot
+## Screenshots
 
-[Screenshot](https://file.io/EWjSOwCnAPC9)
+![screenshot](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
 
 ## Technology's used
 -NMP Package (Axios Map Package)
@@ -37,11 +37,6 @@
 [Presentation-Canva](https://www.canva.com/design/DAFkWGE6URk/4LrXhCZAIa7-7kbaC9eYzQ/edit?utm_content=DAFkWGE6URk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
 
 [Google-Doc](https://docs.google.com/document/d/1X-qRjQeEKvMLnLZvSOgmJNALwKP5snul5ZEGWfB9kyY/edit?usp=sharing)
-
-## Screenshots
-
-![screenshot](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
-
 
 ## Badges & License
 
