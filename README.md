@@ -40,7 +40,7 @@
 
 ## Screenshots
 
-(https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
+![screenshot](https://i.postimg.cc/dVVDNPhQ/Screen-Shot-2023-05-30-at-9-24-18-pm.png)
 
 
 ## Badges & License
